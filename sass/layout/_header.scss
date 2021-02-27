@@ -1,0 +1,90 @@
+.page-header {
+  height: 80px;
+  border-bottom: 1px solid #ececec;
+}
+
+.header {
+  @extend %flex-center;
+
+  &__navigation {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  &__link {
+    display: inline-block;
+    padding: 32px 0;
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    color: $head-text-color;
+
+    transition: color $primary-transform;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+}
+
+.header__link--current {
+  position: relative;
+  color: $accent-color;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+
+    background-color: $accent-color;
+    border-radius: 2px;
+  }
+}
+
+.contacts {
+  @extend %flex-center;
+  margin-left: auto;
+
+  &__link {
+    @extend %flex-center;
+    padding: 32px 0;
+
+    color: $paragraph-text-color;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+
+    transition: fill $primary-transform;
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+    }
+  }
+}

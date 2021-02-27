@@ -1,0 +1,24 @@
+.section {
+  padding: 60px 0;
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
+}
+
+.section-title {
+  margin-bottom: 30px;
+
+  @include font($fs: 28px, $fw: $title-font-weight, $lh: 33px);
+  text-align: center;
+
+  color: $head-text-color;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-title {
+    margin-bottom: 50px;
+
+    @include font($fs: 36px, $fw: $title-font-weight, $lh: 42px);
+  }
+}

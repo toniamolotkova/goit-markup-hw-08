@@ -1,0 +1,68 @@
+.team-section {
+  background-color: $accent-background-color;
+}
+
+.team-members {
+  &__item {
+    margin-bottom: 30px;
+    padding-bottom: 24px;
+
+    background: $primary-white-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__photo {
+    margin-bottom: 30px;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    @include font($fs: 16px, $fw: 500, $lh: 19px);
+
+    text-align: center;
+
+    color: $head-text-color;
+  }
+
+  &__prof {
+    margin-bottom: 16px;
+
+    @include font($fs: 16px, $lh: 19px);
+
+    text-align: center;
+
+    color: $paragraph-text-color;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .team-members {
+    &__item {
+      width: 450px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .team-members {
+    @include flex(wrap);
+
+    margin: -15px;
+    &__item {
+      margin: 15px;
+      width: 354px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-members {
+    flex-wrap: nowrap;
+    &__item {
+      padding-bottom: 30px;
+
+      width: 270px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__link {
+    @extend %flex-center;
+    width: 44px;
+    height: 44px;
+
+    fill: $icon-color;
+    border-radius: 50%;
+
+    transition: fill $primary-transform, background-color $primary-transform;
+
+    &--footer {
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      fill: $primary-white-color;
+    }
+
+    &:hover,
+    &:focus {
+      fill: $primary-white-color;
+      background-color: $accent-color;
+    }
+  }
+}
+
+.social-list--footer {
+  padding: 0;
+}
