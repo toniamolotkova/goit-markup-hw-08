@@ -13,7 +13,7 @@
   background-size: cover;
 
   &__title {
-    width: 360px;
+    max-width: 363px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
@@ -31,13 +31,21 @@
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../image/hero-480@2x.jpg);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-480@2x.jpg);
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: url(../image/hero-768.jpg);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-768.jpg);
   }
 }
 
@@ -45,7 +53,11 @@
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../image/hero-768@2x.jpg);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-768@2x.jpg);
   }
 }
 
@@ -54,9 +66,14 @@
     max-width: 1600px;
     height: 600px;
     padding: 200px 0;
-    background-image: url(../image/hero.jpg);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero.jpg);
+
     &__title {
-      width: 696px;
+      max-width: 696px;
       @include font($fs: 44px, $fw: 900, $lh: 60px);
     }
   }
@@ -66,6 +83,10 @@
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../image/hero@2x.jpg);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero@2x.jpg);
   }
 }

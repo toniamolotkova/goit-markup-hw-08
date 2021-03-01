@@ -8,3 +8,9 @@
   display: flex;
   flex-wrap: $wrap;
 }
+
+@mixin center($dp: flex, $ali: center, $jc: center) {
+  display: $dp;
+  align-items: $ali;
+  justify-content: $jc;
+}

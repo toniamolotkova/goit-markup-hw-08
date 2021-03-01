@@ -1,13 +1,8 @@
 .logo {
   display: inline-block;
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding: 16px 15px;
   font-family: 'Raleway', sans-serif;
-  font-weight: $title-font-weight;
-  font-size: 26px;
-  line-height: 1.19;
-
+  @include font($fs: 24px, $fw: $title-font-weight, $lh: 28px);
   color: #000000;
   text-decoration: none;
 
@@ -16,10 +11,36 @@
   }
 
   &--footer {
+    display: flex;
+    justify-content: center;
+
     margin-right: 0;
     margin-bottom: 20px;
     padding: 0;
 
     color: $primary-white-color;
+  }
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 88px;
+    padding: 26px 15px;
+
+    &--footer {
+      margin-right: 0;
+      padding: 0;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    @include font($fs: 26px, $fw: $title-font-weight, $lh: 31px);
+    &--footer {
+      display: inline-block;
+      padding: 0;
+    }
   }
 }

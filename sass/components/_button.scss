@@ -7,10 +7,7 @@
   border: none;
 
   font-family: inherit;
-  font-weight: $title-font-weight;
-  font-size: 16px;
-  line-height: 1.87;
-
+  @include font($fs: 16px, $fw: $title-font-weight, $lh: 30px);
   text-align: center;
   letter-spacing: 0.06em;
 
