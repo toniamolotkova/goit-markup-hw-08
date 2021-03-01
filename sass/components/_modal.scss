@@ -22,12 +22,16 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 528px;
-  min-height: 581px;
+  width: 100%;
+  max-width: 450px;
+  height: 95%;
+  max-height: 609px;
   background-color: $primary-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  overflow-y: scroll;
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform $primary-transform;
@@ -68,14 +72,23 @@
   &__title {
     display: block;
     margin-bottom: 12px;
-
-    font-weight: $title-font-weight;
-    font-size: 20px;
-    line-height: 1.15;
+    @include font($fs: 20px, $fw: $title-font-weight, $lh: 30px);
     text-align: center;
     letter-spacing: 0.03em;
 
     color: $head-text-color;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    max-height: 581px;
+  }
+  .modal-wraper {
+    &__title {
+      @include font($fs: 20px, $fw: $title-font-weight, $lh: 23px);
+    }
   }
 }
 
@@ -87,8 +100,7 @@
     display: block;
     margin-bottom: 4px;
 
-    font-size: 12px;
-    line-height: 1.167;
+    @include font($fs: 12px, $fw: $primary-font-size, $lh: 14px);
 
     letter-spacing: 0.01em;
   }
@@ -140,9 +152,7 @@
 
     width: 100%;
     height: 120px;
-
-    font-size: 12px;
-    line-height: 1.167;
+    @include font($fs: 12px, $fw: $primary-font-size, $lh: 14px);
     letter-spacing: 0.01em;
 
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -204,9 +214,11 @@
   }
 
   &__link {
-    font-weight: $paragraph-font-weight;
-    font-size: $primary-font-size;
-    line-height: 1.71;
+    @include font(
+      $fs: $primary-font-size,
+      $fw: $paragraph-font-weight,
+      $lh: 24px
+    );
 
     letter-spacing: 0.03em;
 
