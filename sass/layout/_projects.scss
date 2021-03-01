@@ -21,14 +21,6 @@
   }
 }
 
-/*@media screen and (min-width: 480px) {
-  .projects {
-    &__item {
-      width: 450px;
-    }
-  }
-}*/
-
 @media screen and (max-width: 767px) {
   .projects {
     &__item {
@@ -38,7 +30,6 @@
     }
   }
 }
-
 @media screen and (min-width: 768px) {
   .projects {
     @include flex(wrap);
