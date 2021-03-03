@@ -122,6 +122,10 @@
 
 @media screen and (max-width: 480px) {
   .mobile-menu {
+    &__tel-link {
+      @include font($fs: 26px, $fw: 500, $lh: 40px);
+    }
+
     &__socials {
       @include flex(wrap);
     }
